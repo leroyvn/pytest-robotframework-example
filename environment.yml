@@ -1,0 +1,10 @@
+name: pytest-robotframework-example
+dependencies:
+  - matplotlib
+  - pip
+  - pytest
+  - python
+  - robotframework
+  - seaborn
+  - pip:
+    - pytest-robotframework
