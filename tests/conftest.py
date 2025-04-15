@@ -1,9 +1,6 @@
 import os
+
 import pytest
-
-
-# Require the robotframework plugin
-pytest_plugins = ("robotframework",)
 
 
 @pytest.fixture(scope="session")

@@ -1,16 +1,12 @@
 import os
-import sys
 
 import matplotlib.pyplot as plt
 import pytest
-import seaborn as sns
 from pytest_robotframework import keyword
 from robot.api import logger
 
-sns.set_theme()
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
-
-import mylib  # noqa: E402
+import pytest_robotframework_example.mylib as mylib
+from pytest_robotframework_example.testutils.regression import RegressionTest
 
 
 @keyword
@@ -54,3 +50,8 @@ def test_robot_outputdir(robot_outputdir):
     """
     logger.warn(f"{robot_outputdir = }")
     assert True
+
+
+def test_regression():
+    test = RegressionTest()
+    assert test.run()
